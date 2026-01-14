@@ -8,6 +8,9 @@ function insert_Row() {
 	td2.textContent="New Cell2";
 	tr.appendChild(td1);
 	tr.appendChild(td2);
-	table.insertBefore(tr,table.firstElementChild);
-  
+    if (table.firstElementChild) {
+    table.insertBefore(tr, table.firstElementChild);
+} else {
+    table.appendChild(tr);
+}
 }
